@@ -1,0 +1,18 @@
+.MessageList {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Message {
+  width: 300px;
+  min-height: 50px;
+  text-align: left;
+  border-radius: 15px;
+  border: 2px solid darkgrey;
+  background-color: greenyellow;
+  padding: 10px;
+  font-size: 1.5em;
+  margin: 10px 0;
+}
