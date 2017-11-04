@@ -4,7 +4,7 @@ class MessageList extends Component {
   render () {
     return (
       <div>
-        MessageList Component
+        <p>MessageList Component</p>
       </div>
     )
   }
