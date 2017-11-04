@@ -1,10 +1,10 @@
 import React from 'react'
+import './MessageBox.css'
 
 const MessageBox = ({ onChange, onKeyUp, message }) => (
   <form>
     <textarea
-      placeholder='Type a message'
-      cols='60'
+      placeholder='Aa'
       onChange={onChange}
       onKeyUp={onKeyUp}
       value={message}
