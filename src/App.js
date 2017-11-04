@@ -23,8 +23,10 @@ class App extends Component {
     return (
       <div className='App'>
         <Header />
-        <MessageList db={firebase} />
-        <MessageBox db={firebase} />
+        <div className='Body'>
+          <MessageList db={firebase} />
+          <MessageBox db={firebase} />
+        </div>
       </div>
     )
   }

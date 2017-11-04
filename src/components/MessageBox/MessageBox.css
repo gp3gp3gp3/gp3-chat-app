@@ -1,0 +1,15 @@
+form {
+  width: 90%;
+  align-self: center;
+  margin-bottom: 50px;
+}
+
+textarea {
+  resize: none;
+  border-radius: 10px;
+  width: 100%;
+  min-height: 50px;
+  border: 1.5px solid lightgrey;
+  font-size: 1.5em;
+  padding: 5px;
+}

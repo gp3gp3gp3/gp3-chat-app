@@ -1,7 +1,8 @@
 import React from 'react'
+import './MessageList.css'
 
 const Message = ({ message }) => (
-  <p>{message}</p>
+  <span className='Message'>{message}</span>
 )
 
 export default Message
