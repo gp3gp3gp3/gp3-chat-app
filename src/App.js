@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import firebase from 'firebase'
 import Header from './components/Header/Header'
 import MessageList from './components/MessageList/MessageList'
-import MessageBox from './components/MessageBox/MessageBox'
+import MessageBox from './containers/MessageBox'
 import './App.css'
 
 class App extends Component {
