@@ -1,21 +1,33 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import firebase from 'firebase'
+import Header from './components/Header/Header'
+import MessageList from './components/MessageList/MessageList'
+import MessageBox from './components/MessageBox/MessageBox'
+import './App.css'
 
 class App extends Component {
-  render() {
+  constructor () {
+    super()
+    const config = {
+      apiKey: 'AIzaSyBHymkx-sx64eGJFLNmv8Y7nwakdXCNcpQ',
+      authDomain: 'gp3-chat-app.firebaseapp.com',
+      databaseURL: 'https://gp3-chat-app.firebaseio.com',
+      projectId: 'gp3-chat-app',
+      storageBucket: '',
+      messagingSenderId: '111539696639'
+    }
+    firebase.initializeApp(config)
+  }
+
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <Header />
+        <MessageList db={firebase} />
+        <MessageBox db={firebase} />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App
