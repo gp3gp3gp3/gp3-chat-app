@@ -4,7 +4,7 @@ const MessageBox = ({ onChange, onKeyUp, message }) => (
   <form>
     <textarea
       placeholder='Type a message'
-      cols='100'
+      cols='60'
       onChange={onChange}
       onKeyUp={onKeyUp}
       value={message}

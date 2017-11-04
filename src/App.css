@@ -5,7 +5,6 @@
 
 .Body {
   margin: 0 30%;
-  height: calc(100vh - 100px);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

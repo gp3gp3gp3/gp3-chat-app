@@ -3,16 +3,16 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  padding: 20px;
 }
 
 .Message {
-  width: 300px;
-  min-height: 50px;
+  min-width: 300px;
   text-align: left;
   border-radius: 15px;
-  border: 2px solid darkgrey;
+  border: 1.5px solid darkgrey;
   background-color: greenyellow;
-  padding: 10px;
+  padding: 15px;
   font-size: 1.5em;
   margin: 10px 0;
 }

@@ -20,7 +20,9 @@ class MessageListContainer extends Component {
         cloned.key = messageKey
         return cloned
       })
-    this.setState({ messages })
+    this.setState({ messages }, () => {
+      window.scrollTo(0, document.body.scrollHeight)
+    })
   }
 
   render () {
