@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import firebase from 'firebase'
 import Header from './components/Header/Header'
 import MessageList from './containers/MessageList'
@@ -17,6 +18,16 @@ class App extends Component {
       messagingSenderId: '111539696639'
     }
     firebase.initializeApp(config)
+    this.scrollToBottom = this.scrollToBottom.bind(this)
+  }
+
+  scrollToBottom () {
+    const node = ReactDOM.findDOMNode(this.refs['messageBox'])
+    window.scrollTo({
+      left: 0,
+      top: node.offsetTop,
+      behavior: 'smooth'
+    })
   }
 
   render () {
@@ -24,8 +35,14 @@ class App extends Component {
       <div className='App'>
         <Header />
         <div className='Body'>
-          <MessageList db={firebase} />
-          <MessageBox db={firebase} />
+          <MessageList
+            db={firebase}
+            scrollToBottom={this.scrollToBottom}
+          />
+          <MessageBox
+            ref='messageBox'
+            db={firebase}
+          />
         </div>
       </div>
     )

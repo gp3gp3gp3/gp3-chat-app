@@ -1,32 +1,31 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import MessageList from '../components/MessageList/MessageList'
 
-class MessageListContainer extends Component {
-  constructor (props) {
-    super(props)
+class MessageListContainer extends PureComponent {
+  constructor () {
+    super()
     this.state = {
       messages: []
     }
-    const app = props.db.database().ref('messages')
+  }
+
+  componentDidMount () {
+    const app = this.props.db.database().ref('messages')
     app.on('value', snapshot => {
       this.getData(snapshot.val())
     })
   }
 
   getData (values) {
-    const messages = Object.keys(values)
-      .map(messageKey => {
-        const cloned = JSON.parse(JSON.stringify(values[messageKey]))
-        cloned.key = messageKey
-        return cloned
-      })
-    this.setState({ messages }, () => {
-      window.scrollTo({
-        left: 0,
-        top: document.body.scrollHeight,
-        behavior: 'smooth'
-      })
-    })
+    if (values) {
+      const messages = Object.keys(values)
+        .map(messageKey => {
+          const cloned = JSON.parse(JSON.stringify(values[messageKey]))
+          cloned.key = messageKey
+          return cloned
+        })
+      this.setState({ messages }, this.props.scrollToBottom)
+    }
   }
 
   render () {

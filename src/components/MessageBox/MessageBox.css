@@ -1,15 +1,10 @@
-form {
-  width: 90%;
-  align-self: center;
+.form-wrapper {
   margin-bottom: 50px;
 }
 
-textarea {
-  resize: none;
-  border-radius: 10px;
-  width: 100%;
-  min-height: 50px;
-  border: 1.5px solid lightgrey;
+.message-input {
+  width: 80%;
+  height: 50px;
+  padding: 0 10px;
   font-size: 1.5em;
-  padding: 5px;
 }

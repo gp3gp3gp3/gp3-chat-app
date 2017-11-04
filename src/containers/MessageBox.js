@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import MessageBox from '../components/MessageBox/MessageBox'
 
-class MessageBoxContainer extends Component {
+class MessageBoxContainer extends PureComponent {
   constructor () {
     super()
     this.state = {
@@ -9,14 +9,14 @@ class MessageBoxContainer extends Component {
     }
 
     this.onChange = this.onChange.bind(this)
-    this.onKeyUp = this.onKeyUp.bind(this)
+    this.onKeyDown = this.onKeyDown.bind(this)
   }
 
   onChange ({ target: { value: message } }) {
     this.setState({ message })
   }
 
-  onKeyUp (event) {
+  onKeyDown (event) {
     const message = event.target.value.trim()
     if (event.keyCode === 13 && message !== '') {
       event.preventDefault()
@@ -30,7 +30,7 @@ class MessageBoxContainer extends Component {
     return (
       <MessageBox
         onChange={this.onChange}
-        onKeyUp={this.onKeyUp}
+        onKeyDown={this.onKeyDown}
         message={this.state.message}
       />
     )
