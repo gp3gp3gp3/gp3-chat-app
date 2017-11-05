@@ -5,10 +5,9 @@
 
 .Body {
   margin: 0 30%;
-  padding-top: 130px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   background-color: white;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
 }
