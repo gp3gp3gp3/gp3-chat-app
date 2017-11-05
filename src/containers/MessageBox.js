@@ -21,7 +21,7 @@ class MessageBoxContainer extends PureComponent {
     if (event.keyCode === 13 && message !== '') {
       event.preventDefault()
       const dbCon = this.props.db.database().ref('/messages')
-      dbCon.push({ message })
+      dbCon.push({ message, time: Date.now() })
       this.setState({ message: '' })
     }
   }

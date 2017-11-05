@@ -16,3 +16,13 @@
   font-size: 1.5em;
   margin: 10px 0;
 }
+
+.Message-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Message-time {
+  text-align: end;
+  color: grey;
+}
