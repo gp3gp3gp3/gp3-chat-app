@@ -4,6 +4,7 @@ import './Header.css'
 
 const headerStyles = {
   boxShadow: '1px 1px 1px rgba(0,0,0,0.25)',
+  background: '#222',
   height: '60px',
   padding: '20px'
 }
