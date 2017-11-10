@@ -1,13 +1,11 @@
 import firebase from 'firebase'
 import {
   LOGIN_USER,
-  LOGIN_USER_FETCH,
   LOGIN_USER_ERROR,
   LOGOUT
 } from './types'
 
 export const login = user => dispatch => {
-  dispatch({ type: LOGIN_USER_FETCH })
   if (user) {
     dispatch({ type: LOGIN_USER, payload: user })
   } else {

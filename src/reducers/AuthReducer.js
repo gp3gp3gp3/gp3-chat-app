@@ -1,13 +1,11 @@
 import {
   LOGIN_USER,
-  LOGIN_USER_FETCH,
   LOGIN_USER_ERROR,
   LOGOUT
 } from '../actions/types'
 
 const INITIAL_STATE = {
   authenticated: false,
-  loading: false,
   currentUser: null,
   error: ''
 }
@@ -17,11 +15,6 @@ export default (state = INITIAL_STATE, action) => {
     case LOGOUT:
       return {
         ...INITIAL_STATE
-      }
-    case LOGIN_USER_FETCH:
-      return {
-        ...INITIAL_STATE,
-        loading: true
       }
     case LOGIN_USER:
       return {

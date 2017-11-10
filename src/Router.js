@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import firebase from 'firebase'
-import Header from './components/Header/Header'
+import Header from './containers/Header'
 import MessageList from './containers/MessageList'
 import MessageBox from './containers/MessageBox'
 import Login from './containers/Login'
@@ -41,9 +41,7 @@ class Router extends Component {
   }
 
   renderApp () {
-    if (this.props.loading) {
-      return <div />
-    } else if (this.props.authenticated) {
+    if (this.props.authenticated) {
       return (
         <div className='Body'>
           <MessageList
@@ -69,8 +67,8 @@ class Router extends Component {
   }
 }
 
-const mapStateToProps = ({ auth: { authenticated, loading } }) => {
-  return { authenticated, loading }
+const mapStateToProps = ({ auth: { authenticated } }) => {
+  return { authenticated }
 }
 
 export default connect(mapStateToProps, { login })(Router)

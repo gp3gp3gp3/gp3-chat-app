@@ -1,7 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import Headroom from 'react-headroom'
-import { logout } from '../../actions'
 import './Header.css'
 
 const headerStyles = {
@@ -29,10 +27,4 @@ const Header = ({ authenticated, logout }) => (
   </Headroom>
 )
 
-const mapStateToProps = ({ auth: { authenticated } }) => {
-  return {
-    authenticated
-  }
-}
-
-export default connect(mapStateToProps, { logout })(Header)
+export default Header
