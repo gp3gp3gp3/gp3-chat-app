@@ -27,7 +27,5 @@ export const logout = () => dispatch => {
   firebase
     .auth()
     .signOut()
-    .then(() => {
-      dispatch({ type: LOGOUT })
-    })
+  dispatch({ type: LOGOUT })
 }
