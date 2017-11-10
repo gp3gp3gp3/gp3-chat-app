@@ -1,0 +1,15 @@
+.Login-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  min-height: calc(100vh - 100px)
+}
+
+.Login-button {
+  font-size: 2em;
+  background-color: lightgrey;
+  padding: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
