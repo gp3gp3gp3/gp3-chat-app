@@ -1,40 +1,34 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
 import MessageList from '../components/MessageList/MessageList'
+import { fetchMessages } from '../actions'
 
 class MessageListContainer extends PureComponent {
-  constructor () {
-    super()
-    this.state = {
-      messages: []
-    }
-  }
-
   componentDidMount () {
-    const app = this.props.db.database().ref('messages')
-    app.on('value', snapshot => {
-      this.getData(snapshot.val())
-    })
+    this.props.fetchMessages()
   }
 
-  getData (values) {
-    if (values) {
-      const messages = Object.keys(values)
-        .map(messageKey => {
-          const cloned = JSON.parse(JSON.stringify(values[messageKey]))
-          cloned.key = messageKey
-          return cloned
-        })
-      this.setState({ messages }, this.props.scrollToBottom)
-    }
+  componentDidUpdate () {
+    this.props.scrollToBottom()
   }
 
   render () {
     return (
       <MessageList
-        {...this.state}
+        {...this.props}
       />
     )
   }
 }
 
-export default MessageListContainer
+const mapDispatchToProps = {
+    fetchMessages
+}
+
+const mapStateToProps = ({ messages }) => {
+  return {
+    messages
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MessageListContainer)
