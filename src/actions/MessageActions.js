@@ -4,12 +4,13 @@ import {
 } from './types'
 
 export const addMessage = message => dispatch => {
-  const app = firebase.database().ref('/messages')
-  app.push({ message, time: Date.now() })
+  firebase
+    .database()
+    .ref('/messages')
+    .push({ message, time: Date.now() })
 }
 
 export const fetchMessages = () => dispatch => {
-  const app = firebase.database().ref('messages')
   const getData = values => dispatch => {
     if (values) {
       const messages = Object.keys(values)
@@ -22,7 +23,12 @@ export const fetchMessages = () => dispatch => {
     }
   }
 
-  app.on('value', snapshot => {
-    getData(snapshot.val())(dispatch)
-  })
+  firebase
+    .database()
+    .ref('messages')
+    .orderByKey()
+    .limitToLast(20)
+    .on('value', snapshot => {
+      getData(snapshot.val())(dispatch)
+    })
 }
