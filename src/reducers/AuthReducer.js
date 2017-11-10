@@ -20,7 +20,10 @@ export default (state = INITIAL_STATE, action) => {
       return {
         ...INITIAL_STATE,
         authenticated: true,
-        currentUser: action.payload
+        currentUser: {
+          uid: action.payload.uid,
+          displayName: action.payload.displayName
+        }
       }
     case LOGIN_USER_ERROR:
       return {

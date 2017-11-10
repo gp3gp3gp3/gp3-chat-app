@@ -3,11 +3,12 @@ import {
   RECIEVE_MESSAGES
 } from './types'
 
-export const addMessage = message => dispatch => {
+export const addMessage = message => (dispatch, getState) => {
+  const { currentUser } = getState().auth
   firebase
     .database()
     .ref('/messages')
-    .push({ message, time: Date.now() })
+    .push({ message, time: Date.now(), user: currentUser })
 }
 
 export const fetchMessages = () => dispatch => {
