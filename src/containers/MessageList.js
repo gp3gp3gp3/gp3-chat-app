@@ -25,9 +25,10 @@ const mapDispatchToProps = {
     fetchMessages
 }
 
-const mapStateToProps = ({ messages }) => {
+const mapStateToProps = ({ messages, auth: { currentUser } }) => {
   return {
-    messages
+    messages,
+    currentUser
   }
 }
 

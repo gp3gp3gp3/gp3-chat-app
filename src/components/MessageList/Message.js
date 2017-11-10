@@ -25,10 +25,23 @@ class Message extends PureComponent {
   }
 
   render () {
+    const {
+      user: { displayName, uid },
+      message,
+      currentUser: { uid: currentUserId }
+    } = this.props
+    const isCurrentUser = uid === currentUserId
     return (
       <div className='Message-wrapper'>
-        <span className='Message'>{this.props.message}</span>
-        <span className='Message-time'>{this.state.messageTime}</span>
+        {!isCurrentUser && <span
+          className={`Message-time ${isCurrentUser ? 'current-user' : 'other-user'}`}
+        >{displayName}</span>}
+        <span
+          className={`Message ${isCurrentUser ? 'current-user blue' : 'other-user green'}`}
+        >{message}</span>
+        <span
+          className={`Message-time ${isCurrentUser ? 'current-user' : 'other-user'}`}
+        >{this.state.messageTime}</span>
       </div>
     )
   }
