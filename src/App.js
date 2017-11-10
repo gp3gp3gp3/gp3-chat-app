@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import firebase from 'firebase'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import ReduxThunk from 'redux-thunk'
+import reducers from './reducers'
 import Header from './components/Header/Header'
 import MessageList from './containers/MessageList'
 import MessageBox from './containers/MessageBox'
@@ -31,20 +35,23 @@ class App extends Component {
   }
 
   render () {
+    const store = createStore(reducers, {}, applyMiddleware(ReduxThunk))
+
     return (
-      <div className='App'>
-        <Header />
-        <div className='Body'>
-          <MessageList
-            db={firebase}
-            scrollToBottom={this.scrollToBottom}
-          />
-          <MessageBox
-            ref='messageBox'
-            db={firebase}
-          />
+      <Provider store={store}>
+        <div className='App'>
+          <Header />
+          <div className='Body'>
+            <MessageList
+              scrollToBottom={this.scrollToBottom}
+            />
+            <MessageBox
+              ref='messageBox'
+              db={firebase}
+            />
+          </div>
         </div>
-      </div>
+      </Provider>
     )
   }
 }

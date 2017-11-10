@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react'
+import { connect } from 'react-redux'
+import { addMessage } from '../actions'
 import MessageBox from '../components/MessageBox/MessageBox'
 
 class MessageBoxContainer extends PureComponent {
@@ -20,8 +22,7 @@ class MessageBoxContainer extends PureComponent {
     const message = event.target.value.trim()
     if (event.keyCode === 13 && message !== '') {
       event.preventDefault()
-      const dbCon = this.props.db.database().ref('/messages')
-      dbCon.push({ message, time: Date.now() })
+      this.props.addMessage(message)
       this.setState({ message: '' })
     }
   }
@@ -37,4 +38,6 @@ class MessageBoxContainer extends PureComponent {
   }
 }
 
-export default MessageBoxContainer
+const mapDispatchToProps = { addMessage }
+
+export default connect(null, mapDispatchToProps)(MessageBoxContainer)
