@@ -2,14 +2,14 @@ import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import { connect } from 'react-redux'
 import firebase from 'firebase'
-import Header from './containers/Header'
-import MessageList from './containers/MessageList'
-import MessageBox from './containers/MessageBox'
-import Login from './containers/Login'
-import { login } from './actions'
+import Header from '../containers/Header'
+import MessageList from '../containers/MessageList'
+import MessageBox from '../containers/MessageBox'
+import Login from '../containers/Login'
+import { login } from '../actions'
 import './App.css'
 
-class Router extends Component {
+export class Router extends Component {
   constructor (props) {
     super(props)
     const config = {
