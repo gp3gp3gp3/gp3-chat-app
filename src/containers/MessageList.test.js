@@ -20,13 +20,18 @@ const createReduxState = () => {
   }
 }
 
+describe ('MessageListContainer', () => {
+  it ('renders without crashing', () => {
+    <MessageListContainer />
+  })
 
-it('renders MessageList with approriate props from store', () => {
-  const { store, currentUser, messages } = createReduxState()
+  it('renders MessageList with approriate props from store', () => {
+    const { store, currentUser, messages } = createReduxState()
 
-  const subject = shallow(<MessageList store={store} />).find(MessageListContainer)
+    const subject = shallow(<MessageList store={store} />).find(MessageListContainer)
 
-  const actual = subject.prop('currentUser')
+    const actual = subject.prop('currentUser')
 
-  expect(actual).toBe(currentUser)
+    expect(actual).toBe(currentUser)
+  })
 })
