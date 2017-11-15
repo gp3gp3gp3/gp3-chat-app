@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import MessageList from '../components/MessageList/MessageList'
 import { fetchMessages } from '../actions'
 
-class MessageListContainer extends PureComponent {
+export class MessageListContainer extends PureComponent {
   componentDidMount () {
     this.props.fetchMessages()
   }

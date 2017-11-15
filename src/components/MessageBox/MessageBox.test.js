@@ -1,8 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { shallow } from 'enzyme'
 import MessageBox from './MessageBox'
 
 it('renders without crashing', () => {
-  const div = document.createElement('div')
-  ReactDOM.render(<MessageBox />, div)
+  shallow(<MessageBox />)
 })

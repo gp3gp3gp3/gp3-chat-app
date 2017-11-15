@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { addMessage } from '../actions'
 import MessageBox from '../components/MessageBox/MessageBox'
 
-class MessageBoxContainer extends PureComponent {
+export class MessageBoxContainer extends PureComponent {
   constructor () {
     super()
     this.state = {

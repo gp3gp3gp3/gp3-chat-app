@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { logout } from '../actions'
 import Header from '../components/Header/Header'
 
-const HeaderContainer = props => <Header {...props} />
+export const HeaderContainer = props => <Header {...props} />
 
 const mapStateToProps = ({ auth: { authenticated } }) => {
   return {
