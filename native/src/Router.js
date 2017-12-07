@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { View, Text } from 'react-native'
 import firebase from 'firebase'
+import { View, StyleSheet } from 'react-native'
+import Login from './components/Login'
 
 class Router extends Component {
   constructor (props) {
@@ -26,9 +27,7 @@ class Router extends Component {
 
   render () {
     return (
-      <View>
-        <Text>hi</Text>
-      </View>
+      <Login />
     )
   }
 }
