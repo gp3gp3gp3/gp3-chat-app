@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import firebase from 'firebase'
-import { View, StyleSheet } from 'react-native'
+import { View, Text } from 'react-native'
+import { login } from './actions'
 import Login from './components/Login'
 
 class Router extends Component {
@@ -16,19 +17,21 @@ class Router extends Component {
       messagingSenderId: '111539696639'
     }
     firebase.initializeApp(config)
-    // firebase
-    //   .auth()
-    //   .onAuthStateChanged(user => {
-    //     if (user) {
-    //       props.login(user)
-    //     }
-    //   })
+    firebase
+      .auth()
+      .onAuthStateChanged(user => {
+        if (user) {
+          props.login(user)
+        }
+      })
   }
 
   render () {
-    return (
-      <Login />
-    )
+    if (this.props.authenticated) {
+      return <View><Text>hello</Text></View>
+    } else {
+      return <Login />
+    }
   }
 }
 
@@ -36,4 +39,4 @@ const mapStateToProps = ({ auth: { authenticated } }) => {
   return { authenticated }
 }
 
-export default connect(mapStateToProps)(Router)
+export default connect(mapStateToProps, { login })(Router)
