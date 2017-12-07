@@ -63,7 +63,10 @@
       "src/**/*.{js,jsx,mjs}"
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js",
-    "coveragePathIgnorePatterns": ["<rootDir>/src/index.js", "<rootDir>/src/registerServiceWorker.js"],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/src/index.js",
+      "<rootDir>/src/registerServiceWorker.js"
+    ],
     "setupFiles": [
       "<rootDir>/config/polyfills.js"
     ],
