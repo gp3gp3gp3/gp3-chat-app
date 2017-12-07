@@ -5,10 +5,13 @@ import {
   StyleSheet
 } from 'react-native'
 
-const Login = () => {
+const Login = props => {
+  console.log(props)
+  const onLoginPress = props.login()
   return (
     <View style={styles.wrapper}>
       <Text
+        onPress={onLoginPress}
         style={styles.button}
       >Login with Google</Text>
     </View>

@@ -4,7 +4,9 @@ exports[`renders correctly 1`] = `
 ShallowWrapper {
   "length": 1,
   Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Login />,
+  Symbol(enzyme.__unrendered__): <Login
+    login={[Function]}
+  />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -21,6 +23,7 @@ ShallowWrapper {
         accessible={true}
         allowFontScaling={true}
         ellipsizeMode="tail"
+        onPress={[Function]}
         style={
           Object {
             "fontSize": 30,
@@ -48,6 +51,7 @@ ShallowWrapper {
         "allowFontScaling": true,
         "children": "Login with Google",
         "ellipsizeMode": "tail",
+        "onPress": [Function],
         "style": Object {
           "fontSize": 30,
           "margin": 20,
@@ -69,6 +73,7 @@ ShallowWrapper {
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onPress={[Function]}
           style={
             Object {
               "fontSize": 30,
@@ -96,6 +101,7 @@ ShallowWrapper {
           "allowFontScaling": true,
           "children": "Login with Google",
           "ellipsizeMode": "tail",
+          "onPress": [Function],
           "style": Object {
             "fontSize": 30,
             "margin": 20,

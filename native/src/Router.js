@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import firebase from 'firebase'
 import { View, Text } from 'react-native'
 import { login } from './actions'
-import Login from './components/Login'
+import Login from './containers/Login'
 
 class Router extends Component {
   constructor (props) {
