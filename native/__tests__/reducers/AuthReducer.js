@@ -2,7 +2,8 @@
 import reducer from '../../src/reducers/AuthReducer'
 import {
   LOGIN_USER,
-  LOGOUT
+  LOGOUT,
+  LOGIN_USER_ERROR
 } from '../../src/actions/types'
 
 describe('Auth Reducer', () => {
@@ -44,5 +45,16 @@ describe('Auth Reducer', () => {
         error: ''
       })
   })
-  it('should handle LOGIN_USER_ERROR')
+  it('should handle LOGIN_USER_ERROR', () => {
+    const action = {
+      type: LOGIN_USER_ERROR,
+      payload: 'ERROR'
+    }
+    expect(reducer(undefined, action))
+      .toEqual({
+        authenticated: false,
+        currentUser: null,
+        error: 'ERROR'
+      })
+  })
 })

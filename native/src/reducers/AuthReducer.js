@@ -1,6 +1,7 @@
 import {
   LOGIN_USER,
-  LOGOUT
+  LOGOUT,
+  LOGIN_USER_ERROR
 } from '../actions/types'
 
 const INITIAL_STATE = {
@@ -21,6 +22,11 @@ export default (state = INITIAL_STATE, action) => {
           uid: action.payload.uid,
           displayName: action.payload.displayName
         }
+      }
+    case LOGIN_USER_ERROR:
+      return {
+        ...INITIAL_STATE,
+        error: action.payload
       }
     default:
       return state
