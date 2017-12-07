@@ -8,7 +8,7 @@ import Router from '../src/Router'
 
 const middlewares = []
 const mockStore = configureStore(middlewares)
-const initialState = {}
+const initialState = { auth: { authenticated: false } }
 
 it('renders correctly with store', () => {
   const wrapper = shallow(
