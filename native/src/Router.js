@@ -28,7 +28,11 @@ class Router extends Component {
 
   render () {
     if (this.props.authenticated) {
-      return <View><Text>hello</Text></View>
+      return (
+        <View>
+          <Text>hello</Text>
+        </View>
+      )
     } else {
       return <Login />
     }
