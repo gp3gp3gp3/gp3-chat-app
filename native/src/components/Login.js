@@ -5,9 +5,8 @@ import {
   StyleSheet
 } from 'react-native'
 
-const Login = props => {
-  console.log(props)
-  const onLoginPress = props.login()
+const Login = ({ login }) => {
+  const onLoginPress = () => login()
   return (
     <View style={styles.wrapper}>
       <Text
