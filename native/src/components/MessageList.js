@@ -1,8 +1,9 @@
 import React from 'react'
+import { View } from 'react-native'
 import Message from './Message'
 
 const MessageList = ({ messages, currentUser }) => (
-  <div className='MessageList'>
+  <View className='MessageList'>
     {/* <CSSTransitionGroup
       transitionName='message'
       transitionEnterTimeout={500}
@@ -10,7 +11,7 @@ const MessageList = ({ messages, currentUser }) => (
     > */}
     {messages.map(message => <Message {...message} currentUser={currentUser} />)}
     {/* </CSSTransitionGroup> */}
-  </div>
+  </View>
 )
 
 export default MessageList

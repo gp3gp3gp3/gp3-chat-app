@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import firebase from 'firebase'
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import { login } from './actions'
 import Login from './containers/Login'
+import MessageList from './containers/MessageList'
 
 class Router extends Component {
   constructor (props) {
@@ -24,13 +25,27 @@ class Router extends Component {
           props.login(user)
         }
       })
+    // this.scrollToBottom = this.scrollToBottom.bind(this)
   }
+
+  // scrollToBottom () {
+  //   window.scrollTo({
+  //     left: 0,
+  //     top: this.messageBox.offsetTop,
+  //     behavior: 'smooth'
+  //   })
+  // }
 
   render () {
     if (this.props.authenticated) {
       return (
         <View>
-          <Text>hello</Text>
+          <MessageList
+            // scrollToBottom={this.scrollToBottom}
+          />
+          <View ref={messageBox => {
+            this.messageBox = messageBox
+          }} />
         </View>
       )
     } else {

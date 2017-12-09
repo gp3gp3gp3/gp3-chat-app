@@ -27,22 +27,31 @@ ShallowWrapper {
   Symbol(enzyme.__node__): Object {
     "instance": null,
     "key": undefined,
-    "nodeType": "host",
+    "nodeType": "class",
     "props": Object {
       "children": Array [
-        <span
+        <Text
+          accessible={true}
+          allowFontScaling={true}
           className="Message-time other-user"
+          ellipsizeMode="tail"
         >
           Test User
-        </span>,
-        <span
+        </Text>,
+        <Text
+          accessible={true}
+          allowFontScaling={true}
           className="Message other-user green"
+          ellipsizeMode="tail"
         />,
-        <span
+        <Text
+          accessible={true}
+          allowFontScaling={true}
           className="Message-time other-user"
+          ellipsizeMode="tail"
         >
           a few seconds ago
-        </span>,
+        </Text>,
       ],
       "className": "Message-wrapper",
     },
@@ -51,62 +60,80 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
           "children": "Test User",
           "className": "Message-time other-user",
+          "ellipsizeMode": "tail",
         },
         "ref": null,
         "rendered": "Test User",
-        "type": "span",
+        "type": [Function],
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
           "children": undefined,
           "className": "Message other-user green",
+          "ellipsizeMode": "tail",
         },
         "ref": null,
         "rendered": null,
-        "type": "span",
+        "type": [Function],
       },
       Object {
         "instance": null,
         "key": undefined,
-        "nodeType": "host",
+        "nodeType": "class",
         "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
           "children": "a few seconds ago",
           "className": "Message-time other-user",
+          "ellipsizeMode": "tail",
         },
         "ref": null,
         "rendered": "a few seconds ago",
-        "type": "span",
+        "type": [Function],
       },
     ],
-    "type": "div",
+    "type": [Function],
   },
   Symbol(enzyme.__nodes__): Array [
     Object {
       "instance": null,
       "key": undefined,
-      "nodeType": "host",
+      "nodeType": "class",
       "props": Object {
         "children": Array [
-          <span
+          <Text
+            accessible={true}
+            allowFontScaling={true}
             className="Message-time other-user"
+            ellipsizeMode="tail"
           >
             Test User
-          </span>,
-          <span
+          </Text>,
+          <Text
+            accessible={true}
+            allowFontScaling={true}
             className="Message other-user green"
+            ellipsizeMode="tail"
           />,
-          <span
+          <Text
+            accessible={true}
+            allowFontScaling={true}
             className="Message-time other-user"
+            ellipsizeMode="tail"
           >
             a few seconds ago
-          </span>,
+          </Text>,
         ],
         "className": "Message-wrapper",
       },
@@ -115,41 +142,50 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
             "children": "Test User",
             "className": "Message-time other-user",
+            "ellipsizeMode": "tail",
           },
           "ref": null,
           "rendered": "Test User",
-          "type": "span",
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
             "children": undefined,
             "className": "Message other-user green",
+            "ellipsizeMode": "tail",
           },
           "ref": null,
           "rendered": null,
-          "type": "span",
+          "type": [Function],
         },
         Object {
           "instance": null,
           "key": undefined,
-          "nodeType": "host",
+          "nodeType": "class",
           "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
             "children": "a few seconds ago",
             "className": "Message-time other-user",
+            "ellipsizeMode": "tail",
           },
           "ref": null,
           "rendered": "a few seconds ago",
-          "type": "span",
+          "type": [Function],
         },
       ],
-      "type": "div",
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

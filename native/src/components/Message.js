@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import { View, Text } from 'react-native'
 import moment from 'moment'
 
 class Message extends PureComponent {
@@ -31,17 +32,17 @@ class Message extends PureComponent {
     } = this.props
     const isCurrentUser = uid === currentUserId
     return (
-      <div className='Message-wrapper'>
-        {!isCurrentUser && <span
+      <View className='Message-wrapper'>
+        {!isCurrentUser && <Text
           className={`Message-time ${isCurrentUser ? 'current-user' : 'other-user'}`}
-        >{displayName}</span>}
-        <span
+        >{displayName}</Text>}
+        <Text
           className={`Message ${isCurrentUser ? 'current-user blue' : 'other-user green'}`}
-        >{message}</span>
-        <span
+        >{message}</Text>
+        <Text
           className={`Message-time ${isCurrentUser ? 'current-user' : 'other-user'}`}
-        >{this.state.messageTime}</span>
-      </div>
+        >{this.state.messageTime}</Text>
+      </View>
     )
   }
 }

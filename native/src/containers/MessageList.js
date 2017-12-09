@@ -8,9 +8,9 @@ export class MessageListContainer extends PureComponent {
     this.props.fetchMessages()
   }
 
-  componentDidUpdate () {
-    this.props.scrollToBottom()
-  }
+  // componentDidUpdate () {
+  //   this.props.scrollToBottom()
+  // }
 
   render () {
     return (

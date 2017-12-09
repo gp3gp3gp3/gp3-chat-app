@@ -21,6 +21,7 @@ ShallowWrapper {
         "displayName": "Test User",
         "uid": "1234",
       },
+      "fetchMessages": [Function],
       "messages": Array [
         Object {
           "currentUser": Object {
@@ -62,6 +63,7 @@ ShallowWrapper {
           "displayName": "Test User",
           "uid": "1234",
         },
+        "fetchMessages": [Function],
         "messages": Array [
           Object {
             "currentUser": Object {
