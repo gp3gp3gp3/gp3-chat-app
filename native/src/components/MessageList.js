@@ -1,5 +1,5 @@
 import React from 'react'
-// import Message from './Message'
+import Message from './Message'
 
 const MessageList = ({ messages, currentUser }) => (
   <div className='MessageList'>
@@ -8,7 +8,7 @@ const MessageList = ({ messages, currentUser }) => (
       transitionEnterTimeout={500}
       transitionLeaveTimeout={300}
     > */}
-      {/* {messages.map(message => <Message {...message} currentUser={currentUser} />)} */}
+    {messages.map(message => <Message {...message} currentUser={currentUser} />)}
     {/* </CSSTransitionGroup> */}
   </div>
 )

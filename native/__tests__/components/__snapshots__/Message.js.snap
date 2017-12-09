@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Message
+    currentUser={
+      Object {
+        "uid": "123",
+      }
+    }
+    user={
+      Object {
+        "displayName": "Test User",
+        "uid": "1234",
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <span
+          className="Message-time other-user"
+        >
+          Test User
+        </span>,
+        <span
+          className="Message other-user green"
+        />,
+        <span
+          className="Message-time other-user"
+        >
+          a few seconds ago
+        </span>,
+      ],
+      "className": "Message-wrapper",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Test User",
+          "className": "Message-time other-user",
+        },
+        "ref": null,
+        "rendered": "Test User",
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "Message other-user green",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "span",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "a few seconds ago",
+          "className": "Message-time other-user",
+        },
+        "ref": null,
+        "rendered": "a few seconds ago",
+        "type": "span",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <span
+            className="Message-time other-user"
+          >
+            Test User
+          </span>,
+          <span
+            className="Message other-user green"
+          />,
+          <span
+            className="Message-time other-user"
+          >
+            a few seconds ago
+          </span>,
+        ],
+        "className": "Message-wrapper",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Test User",
+            "className": "Message-time other-user",
+          },
+          "ref": null,
+          "rendered": "Test User",
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "Message other-user green",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "span",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "a few seconds ago",
+            "className": "Message-time other-user",
+          },
+          "ref": null,
+          "rendered": "a few seconds ago",
+          "type": "span",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
